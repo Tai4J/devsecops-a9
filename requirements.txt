@@ -1,4 +1,4 @@
 opentelemetry-api==1.27.0
 opentelemetry-sdk==1.27.0
 # 故意釘舊版，讓 Dependabot 跳出漏洞警告 (A9 E 部分)
-requests==2.19.1
+requests==2.34.2
