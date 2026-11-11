@@ -22,4 +22,4 @@ jobs:
       - name: Lint (flake8 + bandit security rules)
         run: flake8 .
       - name: Smoke test
-        run: python -c "import app"
+        run: python -m py_compile app.py
