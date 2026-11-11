@@ -1,6 +1,6 @@
 """A9 demo app: OpenTelemetry tracing (based on A8)."""
 import os
-import subprocess  # nosec B404 - only runs fixed commands, no user input
+import subprocess  # noqa: S404 - only runs fixed commands, no user input
 import requests
 
 from opentelemetry import trace
@@ -23,7 +23,7 @@ def fetch_status(url):
 
 def run_cmd(args):
     with tracer.start_as_current_span("run_cmd"):
-        return subprocess.call(args)  # 修正：用參數清單，不用 shell=True (S602)
+        return subprocess.call(args)  # noqa: S603 - args are hard-coded, not user input
 
 
 def main():
